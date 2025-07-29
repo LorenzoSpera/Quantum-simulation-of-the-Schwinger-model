@@ -4,9 +4,11 @@ This project represents my research exploration during my first days of my stay 
 
 This simulation serves both as a learning foundation and as a stepping stone toward more complex quantum simulations of gauge theories and lattice field models. While the implementation remains a numerical and exploratory prototype, it illustrates how hybrid quantum-classical approaches can be leveraged for strongly interacting systems, even on today's limited quantum hardware.
 
-$
-\boxed{L_W = l_0 +\frac{1}{2}\sum_{k = 0}^{\lceil{N/2}\rceil-1}(Z_{2k}+Z_{2k+1})}
-$
+**The Cauchy-Schwarz Inequality**
+
+```math
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+```
 
 ---
 
