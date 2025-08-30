@@ -66,11 +66,10 @@ $$
 After applying the Jordan–Wigner transformation, the fermionic model is mapped to a spin Hamiltonian
 
 $$
-W_W =
-x \sum_{n=0}^{N-2}\Big(X_{2n+1}X_{2n+2}+Y_{2n+1}Y_{2n+2}\Big)
-+ \left(\frac{m_{\text{lat}}}{g}\sqrt{x}+x\right)
-\sum_{n=0}^{N-1}\Big(X_{2n}X_{2n+1}+Y_{2n}Y_{2n+1}\Big)
-+ \sum_{n=0}^{N-2}\Big(\tfrac{\theta}{2\pi}+\sum_{k=0}^{n}Q_k\Big)^2
+W_W = x \sum_{n=0}^{N-2}(X_{2n+1}X_{2n+2}+Y_{2n+1}Y_{2n+2})
++ (\frac{m_{\text{lat}}}{g}\sqrt{x}+x)
+\sum_{n=0}^{N-1}\Big(X_{2n}X_{2n+1}+Y_{2n}Y_{2n+1})
++ \sum_{n=0}^{N-2}\Big(\tfrac{\theta}{2\pi}+\sum_{k=0}^{n}Q_k)^2
 $$
 
 
