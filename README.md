@@ -50,7 +50,7 @@ $$
 On a lattice with open boundary conditions, Wilson’s formulation yields the discretized Hamiltonian
 
 $$
-H_W =\sum_{n=0}^{N-2}\bar{\phi}_n( \tfrac{r+i\gamma^1}{2a} )U_n \phi_{n+1}+\sum_{n=0}^{N-1}(m_{\text{lat}}+\tfrac{r}{a})\bar{\phi}_n\phi_n+ \sum_{n=0}^{N-2} \tfrac{a g^2}{2}(L_n + \tfrac{\theta}{2\pi})^2
+H_W =\sum_{n=0}^{N-2} \bar{\phi}_n \left( \tfrac{r+i\gamma^1}{2a} \right) U_n \phi_{n+1}+ \sum_{n=0}^{N-1} \left(m_{\text{lat}}+\tfrac{r}{a}\right)\bar{\phi}_n \phi_n+ \sum_{n=0}^{N-2} \tfrac{a g^2}{2}\left(L_n + \tfrac{\theta}{2\pi}\right)^2
 $$
 
 After applying the Jordan–Wigner transformation, the fermionic model is mapped to a spin Hamiltonian
