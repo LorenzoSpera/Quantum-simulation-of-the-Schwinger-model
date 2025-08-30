@@ -127,6 +127,7 @@ The notebook produces:
 - Comparison of VQE energies with exact diagonalization results.
 - Fidelity between the optimized ansatz state and the exact ground state.
 - Expectation values of observables (electric field, particle number).
+![Expectation values](images/eval.png)
 
 These results validate the capability of VQE to capture the non-trivial physics of the Schwinger model.
 
