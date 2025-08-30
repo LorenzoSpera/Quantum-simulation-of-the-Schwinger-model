@@ -17,29 +17,91 @@ The workflow includes:
   - Exact diagonalization of the Hamiltonian for small system sizes.  
   - Fidelity comparison between the exact lowest-energy eigenstate and the variational state obtained from the optimized ansatz.  
 
-## Algorithmic Approach
+## Mathematical Framework
 
-The Variational Quantum Eigensolver (VQE) algorithm is employed with two ansatz choices:
-- SO(4) circuit  
-- R_{XX+YY} circuit  
+Starting from the gauge-invariant Lagrangian density
+\[
+\mathcal{L} = \bar{\psi}(i\!\not\! D - m)\psi,
+\quad D_\mu = \partial_\mu + ig A_\mu,
+\]
+and working in temporal gauge \((A_0 = 0)\), the Hamiltonian density of the Schwinger model becomes
+\[
+\mathcal{H} = -i \bar{\psi}\gamma^{1}(\partial_1 + ig A_{1})\psi + m \bar{\psi}\psi.
+\]
 
-The cost function is the expectation value of the Hamiltonian with respect to the parameterized state. Optimization is performed classically, while expectation values are computed using quantum circuits.
+Including the **topological \(\theta\)-term** modifies the Hamiltonian as
+\[
+\mathcal{H} = -i\bar{\psi}\gamma^{1}(\partial_1+igA_{1})\psi + m \bar{\psi}\psi
++ \frac{1}{2}\left(\partial_0 A_1 + \frac{g\theta}{2\pi}\right)^2,
+\]
+which in integral form reads
+\[
+H = \int dx \; \mathcal{H}
+= \int dx \left[
+ -i\bar{\psi}(x)\gamma^{1}(\partial_1+igA_{1})\psi(x)
+ + m \bar{\psi}(x)\psi(x)
+ + \frac{1}{2}\left(\partial_0 A_1 + \frac{g\theta}{2\pi}\right)^2
+\right].
+\]
 
-Key observables analyzed:
-- Ground state energy  
-- Electric field operator  
-- Particle number operator  
+### Wilson discretization and spin formulation
 
-The obtained variational states are benchmarked against exact solutions to validate the accuracy of the method.
+On a lattice with open boundary conditions, Wilson’s formulation yields the discretized Hamiltonian
+\[
+H_W =
+\sum_{n=0}^{N-2} \bar{\phi}_n \Big( \tfrac{r+i\gamma^1}{2a} \Big) U_n \phi_{n+1} + \text{h.c.}
++ \sum_{n=0}^{N-1}\Big(m_{\text{lat}}+\tfrac{r}{a}\Big)\bar{\phi}_n\phi_n
++ \sum_{n=0}^{N-2} \tfrac{ag^2}{2}\left(L_n + \tfrac{\theta}{2\pi}\right)^2.
+\]
 
-## Features
+After the Jordan–Wigner transformation, the fermionic model is mapped to a spin Hamiltonian
+\[
+\boxed{
+W_W =
+x \sum_{n=0}^{N-2}\!\left(X_{2n+1}X_{2n+2}+Y_{2n+1}Y_{2n+2}\right)
++ \left(\frac{m_{\text{lat}}}{g}\sqrt{x}+x\right)
+\sum_{n=0}^{N-1}\!\left(X_{2n}X_{2n+1}+Y_{2n}Y_{2n+1}\right)
++ \sum_{n=0}^{N-2}\!\left(\tfrac{\theta}{2\pi}+\sum_{k=0}^{n}Q_k\right)^2
+}
+\]
+with
+\[
+Q_k = \tfrac{1}{2}(Z_{2k}+Z_{2k+1}), \quad x = \frac{1}{(ag)^2}.
+\]
 
-- Formulation of the Schwinger model on a lattice via Wilson discretization.  
-- Explicit construction of the Hamiltonian in terms of Pauli operators.  
-- Implementation of multiple variational ansatzes.  
-- Hybrid quantum–classical optimization loop.  
-- Reliability validation via exact diagonalization and fidelity analysis.  
-- Visualization of convergence and physical observables.  
+The electric field operator in spin representation is
+\[
+L_W = \tfrac{\theta}{2\pi} + \tfrac{1}{2}\sum_{k=0}^{\lceil N/2 \rceil -1}(Z_{2k}+Z_{2k+1}).
+\]
+
+## Variational Quantum Eigensolver (VQE)
+
+The VQE algorithm minimizes the expectation value
+\[
+E(\vec{\theta}) = \langle \psi(\vec{\theta}) | W_W | \psi(\vec{\theta}) \rangle,
+\]
+where the variational state is prepared as
+\[
+|\psi(\vec{\theta})\rangle = U_V(\vec{\theta}) U_R |0\rangle.
+\]
+
+Two different ansatz circuits are implemented and benchmarked:
+
+- **SO(4) ansatz**
+
+  ```markdown
+  ![SO(4) Ansatz](images/S04.png)
+  ```
+
+- **\(R_{XX+YY}\) ansatz**
+
+  ```markdown
+  ![Rxx+YY Ansatz](images/R_XXYY.png)
+  ```
+
+The notebook checks the reliability of the method by:
+- **Exact diagonalization** of the Hamiltonian for small systems.  
+- Computing the **fidelity** between the exact lowest-energy eigenstate and the variational state obtained from VQE.
 
 ## Repository Structure
 
@@ -87,6 +149,7 @@ These results validate the capability of VQE to capture the non-trivial physics 
 ## References
 
 [1] Takis Angelides, Pranay Naredi, Arianna Crippa, Karl Jansen, Stefan Kühn, Ivano Tavernelli, Derek S. Wang, *First-Order Phase Transition of the Schwinger Model with a Quantum Computer*. arXiv:2312.12831 (2023). https://arxiv.org/abs/2312.12831
+
 
 
 
