@@ -34,9 +34,7 @@ $$
 Including the topological $\theta$-term, the Hamiltonian density becomes
 
 $$
-\mathcal{H} = -i  \bar{\psi}\gamma^{1}(\partial_1+igA_{1})\psi
-+ m  \bar{\psi}\psi
-+ \tfrac{1}{2}(\partial_0 A_1 + \tfrac{g\theta}{2\pi})^2
+\mathcal{H} = -i  \bar{\psi}\gamma^{1}(\partial_1+igA_{1})\psi+m \bar{\psi}\psi+\tfrac{1}{2}(\partial_0 A_1 + \tfrac{g\theta}{2\pi})^2
 $$
 
 which in integral form reads
