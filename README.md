@@ -31,23 +31,26 @@ $$
 \mathcal{H} = -i  \bar{\psi}\gamma^{1}(\partial_1 + ig A_{1})\psi + m  \bar{\psi}\psi.
 $$
 
-Including the topological $\theta$-term, the hamiltonian becomes
+Including the topological $\theta$-term, the Hamiltonian density becomes
 
 $$
-\mathcal{H} = -i\bar{\psi}\gamma^{1}(\partial_1+igA_{1})\psi + m\bar{\psi}\psi
-+ {1}/{2}\Big(\partial_0 A_1 + {g\theta}/{2\pi}\Big)^2
+\mathcal{H} = -i \, \bar{\psi}\gamma^{1}(\partial_1+igA_{1})\psi
++ m \, \bar{\psi}\psi
++ \tfrac{1}{2}\left(\partial_0 A_1 + \tfrac{g\theta}{2\pi}\right)^2
 $$
 
 which in integral form reads
 
 $$
-H = \int dx \mathcal{H}
-=\\int dx \Big[
+H = \int dx \, \mathcal{H}
+= \int dx \Big[
  -i\bar{\psi}(x)\gamma^{1}(\partial_1+igA_{1})\psi(x)
  + m \, \bar{\psi}(x)\psi(x)
  + \tfrac{1}{2}\Big(\partial_0 A_1 + \tfrac{g\theta}{2\pi}\Big)^2
 \Big].
 $$
+
+---
 
 ### Wilson discretization and spin formulation
 
@@ -57,18 +60,19 @@ $$
 H_W =
 \sum_{n=0}^{N-2} \bar{\phi}_n \Big( \tfrac{r+i\gamma^1}{2a} \Big) U_n \phi_{n+1} + \text{h.c.}
 + \sum_{n=0}^{N-1}\Big(m_{\text{lat}}+\tfrac{r}{a}\Big)\bar{\phi}_n\phi_n
-+ \sum_{n=0}^{N-2} \tfrac{ag^2}{2}\left(L_n + \tfrac{\theta}{2\pi}\right)^2.
++ \sum_{n=0}^{N-2} \tfrac{a g^2}{2}\Big(L_n + \tfrac{\theta}{2\pi}\Big)^2
 $$
 
-After the Jordan–Wigner transformation, the fermionic model is mapped to a spin Hamiltonian
+After applying the Jordan–Wigner transformation, the fermionic model is mapped to a spin Hamiltonian
 
 $$
 W_W =
-x \sum_{n=0}^{N-2}\!\left(X_{2n+1}X_{2n+2}+Y_{2n+1}Y_{2n+2}\right)
+x \sum_{n=0}^{N-2}\Big(X_{2n+1}X_{2n+2}+Y_{2n+1}Y_{2n+2}\Big)
 + \left(\frac{m_{\text{lat}}}{g}\sqrt{x}+x\right)
-\sum_{n=0}^{N-1}\!\left(X_{2n}X_{2n+1}+Y_{2n}Y_{2n+1}\right)
-+ \sum_{n=0}^{N-2}\!\left(\tfrac{\theta}{2\pi}+\sum_{k=0}^{n}Q_k\right)^2
+\sum_{n=0}^{N-1}\Big(X_{2n}X_{2n+1}+Y_{2n}Y_{2n+1}\Big)
++ \sum_{n=0}^{N-2}\Big(\tfrac{\theta}{2\pi}+\sum_{k=0}^{n}Q_k\Big)^2
 $$
+
 
 with
 
