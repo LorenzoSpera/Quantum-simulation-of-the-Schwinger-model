@@ -35,7 +35,7 @@ Including the topological $\theta$-term, the hamiltonian becomes
 
 $$
 \mathcal{H} = -i\bar{\psi}\gamma^{1}(\partial_1+igA_{1})\psi + m\bar{\psi}\psi
-+ \tfrac{1}{2}\Big(\partial_0 A_1 + \tfrac{g\theta}{2\pi}\Big)^2
++ \frac{1}{2}\Big(\partial_0 A_1 + \frac{g\theta}{2\pi}\Big)^2
 $$
 
 which in integral form reads
