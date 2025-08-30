@@ -58,16 +58,11 @@ pip install -r requirements.txt
 
 ## Usage
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/schwinger-vqe.git
-   cd schwinger-vqe
-   ```
-2. Install dependencies:
+1. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-3. Launch the notebook:
+2. Launch the notebook:
    ```bash
    jupyter notebook Simulation.ipynb
    ```
