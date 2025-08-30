@@ -71,7 +71,7 @@ $$
 The VQE algorithm minimizes the expectation value
 
 $$
-E(\vec{\theta}) = \langle \psi(\vec{\theta}) \vert \, W_W \, \vert \psi(\vec{\theta}) \rangle,
+E(\vec{\theta}) = \langle \psi(\vec{\theta}) \vert  W_W  \vert \psi(\vec{\theta}) \rangle,
 $$
 
 where the variational state is prepared as
