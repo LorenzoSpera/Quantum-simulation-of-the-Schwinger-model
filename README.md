@@ -22,27 +22,27 @@ The workflow includes:
 Starting from the gauge-invariant Lagrangian density
 
 $$
-\mathcal{L} = \bar{\psi}(i\gamma^{\mu}D_{\mu} - m)\psi,\qquad D_\mu = \partial_\mu + ig A_\mu,
+\mathcal{L} = \bar{\psi}(i\!\not\! D - m)\psi,\qquad D_\mu = \partial_\mu + ig A_\mu
 $$
 
-and working in temporal gauge $$(A_0 = 0)$$, the Hamiltonian density of the Schwinger model becomes
+and working in temporal gauge $(A_0 = 0)$, the Hamiltonian density of the Schwinger model becomes
 
 $$
 \mathcal{H} = -i \, \bar{\psi}\gamma^{1}(\partial_1 + ig A_{1})\psi + m \, \bar{\psi}\psi.
 $$
 
-Including the topological \(\theta\)-term modifies the Hamiltonian as
+Including the topological $\theta$-term modifies the Hamiltonian as
 
 $$
 \mathcal{H} = -i\bar{\psi}\gamma^{1}(\partial_1+igA_{1})\psi + m\,\bar{\psi}\psi
-+ \frac{1}{2}\left(\partial_0 A_1 + \frac{g\theta}{2\pi}\right)^2,
++ \tfrac{1}{2}\Big(\partial_0 A_1 + \tfrac{g\theta}{2\pi}\Big)^2,
 $$
 
 which in integral form reads
 
 $$
-H = \int dx\; \mathcal{H}
-= \int dx\, \Big[
+H \,=\, \int dx\; \mathcal{H}
+\,=\, \int dx\, \Big[
  -i\bar{\psi}(x)\gamma^{1}(\partial_1+igA_{1})\psi(x)
  + m \, \bar{\psi}(x)\psi(x)
  + \tfrac{1}{2}\Big(\partial_0 A_1 + \tfrac{g\theta}{2\pi}\Big)^2
@@ -63,13 +63,11 @@ $$
 After the Jordan–Wigner transformation, the fermionic model is mapped to a spin Hamiltonian
 
 $$
-
 W_W =
 x \sum_{n=0}^{N-2}\!\left(X_{2n+1}X_{2n+2}+Y_{2n+1}Y_{2n+2}\right)
 + \left(\frac{m_{\text{lat}}}{g}\sqrt{x}+x\right)
 \sum_{n=0}^{N-1}\!\left(X_{2n}X_{2n+1}+Y_{2n}Y_{2n+1}\right)
 + \sum_{n=0}^{N-2}\!\left(\tfrac{\theta}{2\pi}+\sum_{k=0}^{n}Q_k\right)^2
-
 $$
 
 with
@@ -104,7 +102,7 @@ Two different ansatz circuits are implemented and benchmarked:
 
 ![SO(4) Ansatz](images/S04.png)
 
-**\(R_{XX+YY}\) ansatz**
+**$R_{XX+YY}$ ansatz**
 
 ![Rxx+YY Ansatz](images/R_XXYY.png)
 
