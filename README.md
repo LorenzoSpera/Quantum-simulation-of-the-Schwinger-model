@@ -47,13 +47,7 @@ $$
 
 ### Wilson discretization and spin formulation
 
-On a lattice with open boundary conditions, Wilson’s formulation yields the discretized Hamiltonian
-
-$$
-H_W =\sum_{n=0}^{N-2} \bar{\phi}_{n}( \tfrac{r+i\gamma^1}{2a})U_n\phi_{n+1}+\sum_{n=0}^{N-1}(m_{\text{lat}}+\tfrac{r}{a})\bar{\phi}_n{\phi}_{n}+ \sum_{n=0}^{N-2} \tfrac{a g^2}{2}\left(L_n + \tfrac{\theta}{2\pi}\right)^2
-$$
-
-After applying the Jordan–Wigner transformation, the fermionic model is mapped to a spin Hamiltonian
+On a lattice with open boundary conditions, Wilson’s formulation, after applying the Jordan–Wigner transformation,  yields the discretized Hamiltonian
 
 $$
 W_W = x \sum_{n=0}^{N-2}(X_{2n+1}X_{2n+2}+Y_{2n+1}Y_{2n+2})+ (\frac{m_{\text{lat}}}{g}\sqrt{x}+x)\sum_{n=0}^{N-1}\Big(X_{2n}X_{2n+1}+Y_{2n}Y_{2n+1})+ \sum_{n=0}^{N-2}\Big(\tfrac{\theta}{2\pi}+\sum_{k=0}^{n}Q_k)^2
