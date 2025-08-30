@@ -40,12 +40,7 @@ $$
 which in integral form reads
 
 $$
-H = \int dx \, \mathcal{H}
-= \int dx \Big[
- -i\bar{\psi}(x)\gamma^{1}(\partial_1+igA_{1})\psi(x)
- + m \, \bar{\psi}(x)\psi(x)
- + \tfrac{1}{2}\Big(\partial_0 A_1 + \tfrac{g\theta}{2\pi}\Big)^2
-\Big].
+H = \int dx  \mathcal{H}= \int dx \Big[-i\bar{\psi}(x)\gamma^{1}(\partial_1+igA_{1})\psi(x) + m \bar{\psi}(x)\psi(x) +\tfrac{1}{2}\Big(\partial_0 A_1 + \tfrac{g\theta}{2\pi}\Big)^2\Big].
 $$
 
 ---
@@ -55,19 +50,13 @@ $$
 On a lattice with open boundary conditions, Wilson’s formulation yields the discretized Hamiltonian
 
 $$
-H_W =
-\sum_{n=0}^{N-2} \bar{\phi}_n \Big( \tfrac{r+i\gamma^1}{2a} \Big) U_n \phi_{n+1} + \text{h.c.}
-+ \sum_{n=0}^{N-1}\Big(m_{\text{lat}}+\tfrac{r}{a}\Big)\bar{\phi}_n\phi_n
-+ \sum_{n=0}^{N-2} \tfrac{a g^2}{2}\Big(L_n + \tfrac{\theta}{2\pi}\Big)^2
+H_W =\sum_{n=0}^{N-2} \bar{\phi}_n \Big( \tfrac{r+i\gamma^1}{2a} \Big) U_n \phi_{n+1} + \text{h.c.} + \sum_{n=0}^{N-1}\Big(m_{\text{lat}}+\tfrac{r}{a}\Big)\bar{\phi}_n\phi_n+ \sum_{n=0}^{N-2} \tfrac{a g^2}{2}\Big(L_n + \tfrac{\theta}{2\pi}\Big)^2
 $$
 
 After applying the Jordan–Wigner transformation, the fermionic model is mapped to a spin Hamiltonian
 
 $$
-W_W = x \sum_{n=0}^{N-2}(X_{2n+1}X_{2n+2}+Y_{2n+1}Y_{2n+2})
-+ (\frac{m_{\text{lat}}}{g}\sqrt{x}+x)
-\sum_{n=0}^{N-1}\Big(X_{2n}X_{2n+1}+Y_{2n}Y_{2n+1})
-+ \sum_{n=0}^{N-2}\Big(\tfrac{\theta}{2\pi}+\sum_{k=0}^{n}Q_k)^2
+W_W = x \sum_{n=0}^{N-2}(X_{2n+1}X_{2n+2}+Y_{2n+1}Y_{2n+2})+ (\frac{m_{\text{lat}}}{g}\sqrt{x}+x)\sum_{n=0}^{N-1}\Big(X_{2n}X_{2n+1}+Y_{2n}Y_{2n+1})+ \sum_{n=0}^{N-2}\Big(\tfrac{\theta}{2\pi}+\sum_{k=0}^{n}Q_k)^2
 $$
 
 
