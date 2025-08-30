@@ -22,27 +22,27 @@ The workflow includes:
 Starting from the gauge-invariant Lagrangian density
 
 $$
-\mathcal{L} = \bar{\psi}(i\!\not\! D - m)\psi,\qquad D_\mu = \partial_\mu + ig A_\mu
+\mathcal{L} = \bar{\psi}(i\gamma^{\mu}D_{\mu} - m)\psi,\qquad D_\mu = \partial_\mu + ig A_\mu
 $$
 
 and working in temporal gauge $(A_0 = 0)$, the Hamiltonian density of the Schwinger model becomes
 
 $$
-\mathcal{H} = -i \, \bar{\psi}\gamma^{1}(\partial_1 + ig A_{1})\psi + m \, \bar{\psi}\psi.
+\mathcal{H} = -i  \bar{\psi}\gamma^{1}(\partial_1 + ig A_{1})\psi + m  \bar{\psi}\psi.
 $$
 
-Including the topological $\theta$-term modifies the Hamiltonian as
+Including the topological $\theta$-term, the hamiltonian becomes
 
 $$
-\mathcal{H} = -i\bar{\psi}\gamma^{1}(\partial_1+igA_{1})\psi + m\,\bar{\psi}\psi
-+ \tfrac{1}{2}\Big(\partial_0 A_1 + \tfrac{g\theta}{2\pi}\Big)^2,
+\mathcal{H} = -i\bar{\psi}\gamma^{1}(\partial_1+igA_{1})\psi + m\bar{\psi}\psi
++ \tfrac{1}{2}\Big(\partial_0 A_1 + \tfrac{g\theta}{2\pi}\Big)^2
 $$
 
 which in integral form reads
 
 $$
-H \,=\, \int dx\; \mathcal{H}
-\,=\, \int dx\, \Big[
+H = \int dx \mathcal{H}
+=\\int dx \Big[
  -i\bar{\psi}(x)\gamma^{1}(\partial_1+igA_{1})\psi(x)
  + m \, \bar{\psi}(x)\psi(x)
  + \tfrac{1}{2}\Big(\partial_0 A_1 + \tfrac{g\theta}{2\pi}\Big)^2
